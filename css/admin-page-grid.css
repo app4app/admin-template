@@ -312,29 +312,26 @@ h3 {
 
 .logo-with-title {
     display: inline-block; 
-}
-
-.logo {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
+    padding-left: 10px;
     padding-top: 5px;
 }
 
+.logo {
+    display: inline-block;
+}
+
 .logo.chevron{
-    font-size: 24px;
-    letter-spacing: -12px;
+    font-size: 18px;
+    letter-spacing: -8px;
     vertical-align: bottom;
 }
 
 .logo.mood{
-    font-size: 18px;
-    letter-spacing: -12px;
+    font-size: 24px;
+    letter-spacing: -8px;
 }
 
 .logo-title {
-    margin: 0;
-    padding: 3px 0px 5px 10px;
+    padding-left: 10px;
     display: inline-block;
 }
