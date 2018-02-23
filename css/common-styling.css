@@ -1,0 +1,200 @@
+:root {
+    --blue-lighten-5: rgba(227, 242, 253, 1);
+    --blue-lighten-4: rgba(187, 222, 251, 1);
+    --blue-lighten-3: rgba(144, 202, 249, 1);
+    --blue-lighten-2: rgba(100, 180, 246, 1);
+    --blue-lighten-1: rgba(66, 164, 245, 1);
+
+    --blue: #2196F3;
+
+    --blue-darken-1: #1e88e5ff;
+    --blue-darken-2: #1976d2ff;
+    --blue-darken-3: #1565c0ff;
+    --blue-darken-4: #0d47a1ff;
+    
+    --blue-accent-1: #82b1ff;
+    --blue-accent-2: #448aff;
+    --blue-accent-3: #2979ff;
+    --blue-accent-4: #2962ff;
+    
+    --main-bg-color: #f0f0f0;
+
+    --side-menu-background: #0747A6;
+    --side-menu-color: #DEEBFF;
+    --side-menu-background-hover: rgba(9, 30, 66, 0.42);
+    --side-menu-color-hover: #DEEBFF;
+    --side-menu-footer-background: #0747A6;
+    --side-menu-footer-color: #DEEBFF;
+
+    /*--content-header-background: #0093ff;*/
+    --content-header-background: var(--blue-darken-3);
+
+    --content-header-color: var(--blue-lighten-5);
+
+    --content-background: var(--blue-lighten-5);
+    --content-color: black;
+
+    --content-mr-background: whitesmoke;
+
+    --content-sr-background: var(--blue-lighten-1);
+
+    --content-footer-background: var(--blue-darken-3);
+    --content-footer-color: var(--blue-lighten-5);
+
+    --header-height: 3em;
+    --side-menu-width: 250px;    
+    --content-mr-heigt: 70%;
+    --footer-height: 3em;   
+
+    --grid-rows-l: 
+        var(--header-height) 
+        auto 
+        var(--footer-height);
+
+    --grid-columns-l: 
+        var(--side-menu-width) 1fr;    
+
+    --grid-area-l-w-menu: 
+        "side_menu_header content_header content_header"
+        "side_menu_panel content_panel property_panel"
+        "side_menu_footer content_footer content_footer";              
+
+    --grid-area-l-wo-menu: 
+        "side_menu_header content_header content_header"
+        "content_panel content_panel property_panel"
+        "side_menu_footer content_footer content_footer";
+
+    --grid-area-s-w-menu:
+        "side_menu_header"
+        "side_menu_panel"
+        "side_menu_footer";    
+        
+    --grid-area-s-wo-menu:
+        "side_menu_header"
+        "content_header"
+        "content_panel"
+        "content_footer";  
+        
+    --grid-rows-s-wo-menu:
+        var(--header-height)
+        var(--header-height)
+        1fr
+        var(--footer-height);
+
+    --grid-rows-s-w-menu:
+        var(--header-height)
+        1fr
+        var(--footer-height);
+
+    --grid-columns-s: 1fr; 
+    
+}
+
+
+/* PAGE GRID DEFINITION */
+.side-menu-header { grid-area: side_menu_header; }
+.side-menu-panel { grid-area: side_menu_panel; }
+.side-menu-footer { grid-area: side_menu_footer; }
+
+.content-header { grid-area: content_header; }
+.content-panel { grid-area: content_panel; }
+.content-footer { grid-area: content_footer; }
+
+.property-panel { grid-area: property_panel; }
+
+/* COMMON STYLING */
+html {
+    background-color: var(--content-background);
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+html, body, div, p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+html, body, div, p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+p {
+    padding: 0.8em;
+}
+
+h3 {
+    font-size: 120%;
+    font-weight: 400;
+    padding-left: 1em;
+    padding-top: 0.6em;
+}
+
+.hidden-label {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+  
+input,
+select, 
+textarea {
+  font-family: Tahoma, sans-serif;
+  font-size: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="textarea"],
+input[type="number"],
+input[type="tel"],
+select {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 1em;
+  height: 3em;
+  margin-bottom: 1em;
+  border: 1px solid #cdcdcd;
+  outline: none;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="textarea"],
+input[type="number"]:focus,
+input[type="tel"]:focus {
+  border: 1px solid #869960;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.13);
+}
+
+textarea {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 1em 1em;
+  height: 8em;
+  margin-bottom: 1em;
+  border: 1px solid #cdcdcd;
+  outline: none;
+}

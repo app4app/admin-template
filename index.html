@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/admin-page-grid.css">
-    <link rel="stylesheet" href="css/admin-page-menu.css">
+    <link rel="stylesheet" href="css/common-styling.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/admin-page-menu.css">
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/admin-page-grid.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <title>Codeless Softvare template</title>
 </head>
 <body>
@@ -18,11 +19,7 @@
         <div class="side-menu-header">
             <div class="side-menu-header-content">
                 <div class="logo-with-title">
-                    <div class="logo">
-                        <span class="logo chevron"><</span>
-                        <span class="logo mood">&#x263A</span>
-                        <span class="logo chevron">></span>
-                    </div>
+                    <div class="logo yellow" w3-include-html="logo.html"></div>
                     <div class="logo-title">   
                         Codeless Software
                     </div>            
@@ -51,12 +48,50 @@
         </div>
 
         <div class="content-panel display">
-            <div class="logo">
-                <span class="logo chevron"><</span>
-                <span class="logo mood">&#x263A</span>
-                <span class="logo chevron">></span>
+            <div class="content">
+                <div class="description-panel">
+                    <h1>Tvrtke, udruge, akademske institucije, hobisti...</h1>
+                    <p>Svijet oko nas je kompleksan, promjenjiv i prepun različitih podataka koje treba prikupiti i obraditi kako bismo iz njih izvukli korisne informacije.</p>
+                    <p>Ponekad se promjene događaju tako brzo da ih klasična informatčka rješenja ne mogu pratiti.</p>
+                    <p>Zato je tu <span class="logo" w3-include-html="logo.html"></span>&nbsp&nbsp Codeless Software, sustav koji se prilagođava Vašim idejama - brzo i cjelovito, a za njegovo korištenje ne trebate biti programer.</p>
+                    <h3>Pretvorite Vaše ideje u stvarnost! Bez odlaganja i bez potrebe za programiranjem!</h3>
+                    <h1>&nbsp</h1>
+                    <div class="logo-with-title">
+                        <a id="link-to-form" class="button yellow" href="admin-page-grid.html">
+                            <div class="logo" w3-include-html="logo.html"></div>
+                            <div class="logo-title">   
+                                Isprobaj besplatno
+                            </div>
+                        </a>            
+                    </div>
+                </div>
+                <div class="login-panel">
+                    <div class="login-card">
+                        <form>
+                            <h3>Prijava u sustav<br></h3>
+                            <div>
+                                <label for="username" class="hidden-label">Korisničko ime</label>
+                                <input id="username" type="text" name="valUsername" placeholder="Korisničko ime">        
+                            </div>
+                            <div>
+                                <label for="password" class="hidden-label">Upišite eMail adresu:</label>
+                                <input id="password" type="password" name="valPassword" placeholder="Zaporka">        
+                            </div>
+                        </form>
+                        <div type="submit" class="logo-with-title">
+                            <a id="link-to-form" class="button green" href="admin-page-grid.html">
+                                <div class="logo" w3-include-html="logo.html"></div>
+                                <div class="logo-title">   
+                                    Prijavi se
+                                </div>
+                            </a>            
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <p>Content Panel</p>            
+
+             
 
         </div>
 
