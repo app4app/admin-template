@@ -18,6 +18,8 @@
     --blue-accent-4: #2962ff;
     
     --main-bg-color: #f0f0f0;
+    --panel-color-dark: rgba(9, 30, 66, 1);
+    --scrollbar-color: rgba(9, 30, 66, 1);
 
     --side-menu-background: #0747A6;
     --side-menu-color: #DEEBFF;
@@ -108,18 +110,8 @@ html {
 }
 
 body {
-    font-family: Tahoma, sans-serif;
-    font-size: 1em;
-}
-
-html, body, div, p, h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-body {
-    font-family: Tahoma, sans-serif;
+    font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 300;
     font-size: 1em;
 }
 
@@ -158,7 +150,7 @@ textarea {
 select {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 input[type="email"],
@@ -175,6 +167,7 @@ select {
   height: 3em;
   margin-bottom: 1em;
   border: 1px solid #cdcdcd;
+  border-radius: 3px;
   outline: none;
 }
 
@@ -184,8 +177,9 @@ input[type="text"]:focus,
 input[type="textarea"],
 input[type="number"]:focus,
 input[type="tel"]:focus {
-  border: 1px solid #869960;
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.13);
+  border: 1px solid #75757599;
+  box-shadow: inset 2px 2px 2px #303F9F88;
+  border-radius: 3px;
 }
 
 textarea {
@@ -197,4 +191,92 @@ textarea {
   margin-bottom: 1em;
   border: 1px solid #cdcdcd;
   outline: none;
+}
+
+::-webkit-scrollbar { 
+    height: 8px; 
+    width: 8px;
+}
+
+::-webkit-scrollbar-corner { 
+    display: none;
+}
+
+::-webkit-scrollbar-thumb { 
+    background-color: rgba(0, 0, 0, 0);
+}
+
+:hover::-webkit-scrollbar-thumb { 
+    background-color: var(--scrollbar-color);
+    border-radius: 8px;
+}
+
+.ellipsis {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v36/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: -0.5em;
+    display: inline-block;
+}
+
+.side-menu-header-content .logo-area {
+    padding-top: 7px;
+    padding-left: 1em;
+}
+
+.logo-with-title {
+    display: inline-block; 
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo.yellow {
+    color: #FF9800;
+}
+
+.logo.chevron{
+    font-size: 18px;
+    letter-spacing: -8px;
+    vertical-align: bottom;
+}
+
+.logo.mood{
+    font-size: 24px;
+    letter-spacing: -8px;
+}
+
+.logo-title {
+    padding-left: 10px;
+    display: inline-block;
+}
+
+/* BUTTON */
+.button {
+    border: none;
+    /*color: var(--blue-lighten-5);
+    background: var(--blue-darken-4);
+    box-shadow: 3px 3px 2px 0px #757575ff;*/
+    margin: 0;
+    padding: 0.3em 1.5em 0.7em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
 }

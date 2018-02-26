@@ -91,12 +91,7 @@
 }
 
 .content-panel {
-    background-color: var(--blue-lighten-4);
-    background: url(../images/more1.jpg) center left / cover no-repeat #0079bf;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;   
-    
+    background-color: #FFFFFF;
     color: var(--content-color);
     padding: 0;
 
@@ -122,49 +117,55 @@
 .content p {
     
     color: var(--blue-darken-4);
-    color: #212121;
-    font-weight: normal;
+    color: #FFFFFF;
+    font-weight: 300;
     padding-bottom: 0.5em;
 }
 
 .content p {
-    color: #757575;  
+    color: #FFFFFF;  
 }
 
 .description-panel {
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.835);
-    border-radius: 3px;
+    background-color: #3F51B5;
+    border-radius: 6px 0 0 6px;
     /*box-shadow: 3px 3px 2px 0px #888888; */
-    margin: 2em;
-    padding: 2em;
+    margin-top: 2em;
+    margin-left:2em;
+    padding: 2em 4em 2em 2em;
     text-align: center;
     min-width: 20em;
     max-width: 800px;
-    justify-self: center;
+    justify-self: right;
+    align-self: top;
 }
 
 .login-panel {
     box-sizing: border-box;
-    margin: 2em;
-    padding: 0 2em 0 2em;
-    justify-self: center;
+    background-color: var(--panel-color-dark);
+    border-radius: 0 6px 6px 0;
+    margin-top: 2em;
+    margin-right: 2em;
+    padding: 1em 4em 2em 3em;
+    justify-self: left;
+    align-self: top;
     width: 100%;
     max-width: 30em;
 }
 
 .login-card {
-    background-color: #C5CAE9cc;
-    border-radius: 3px;
+    border-radius: 0 6px 6px 0;
     /*box-shadow: 3px 3px 2px 0px #888888;*/
     width: 100%;
     min-height: 30em;
-    text-align: center;
+    text-align: left;
     padding: 1em;
 }
 
-.login-card h1 h2 h3 {
-    color: #212121;
+.login-card p {
+    margin: 0;
+    padding: 0;
 }
 
 .content-footer {
@@ -208,124 +209,32 @@
     }
 }
 
-::-webkit-scrollbar { 
-    height: 8px; 
-    width: 8px;
-}
 
-::-webkit-scrollbar-corner { 
-    display: none;
-}
-
-::-webkit-scrollbar-thumb { 
-    background-color: rgba(0, 0, 0, 0);
-}
-
-:hover::-webkit-scrollbar-thumb { 
-    background-color: var(--content-header-background);
-    border-radius: 8px;
-}
-
-.ellipsis {
-    overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-/* fallback */
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialicons/v36/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
-  }
-  
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    letter-spacing: -0.5em;
-    display: inline-block;
-}
-
-.logo-with-title {
-    display: inline-block; 
-    padding-left: 10px;
-    padding-top: 5px;
-}
-
-.logo {
-    display: inline-block;
-}
-
-.logo.yellow {
-    color: #FF9800;
-}
-
-.logo.chevron{
-    font-size: 18px;
-    letter-spacing: -8px;
-    vertical-align: bottom;
-}
-
-.logo.mood{
-    font-size: 24px;
-    letter-spacing: -8px;
-}
-
-.logo-title {
-    padding-left: 10px;
-    display: inline-block;
-}
-
-/* BUTTON */
-.button {
-    border: none;
-    color: var(--blue-lighten-5);
-    background: var(--blue-darken-4);
-    box-shadow: 3px 3px 2px 0px #757575ff;
-    margin: 0;
-    padding: 0.3em 1.5em 0.7em 1.5em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 3px;
-}
 
 .button.green {
-    background: #4CAF50ff;
-    box-shadow: 3px 3px 2px 0px #757575ff;
+    border: 2px solid #4CAF50ff;
     color: #fff;
-    font-weight: normal;
 }
 
 .button.green:hover {
-    background: #8BC34A;
+    color: #4CAF50ff;
 }
 
 .button.green:active {
-    background: #8BC34A;
-    box-shadow: inset 3px 3px 2px 0px #3f6f21;
-    margin-top: 3px;
-    margin-left: 3px;
+    color: #8BC34A;
+    border: 2px solid #8BC34A;
 }
 
 .button.yellow {
-    
-    background: #FF9800ff;
-    box-shadow: 3px 3px 2px 0px #757575ff;
-    color: #FFFFFF;
-    font-weight: normal;
+    border: 2px solid #FF9800ff;
+    color: #fff;
 }
 
 .button.yellow:hover {
-    background: #FFC107;
+    color: #FF9800ff;
 }
 
 .button.yellow:active {
-    background: #FFC107;
-    box-shadow: inset 3px 3px 2px 0px #757575ff;
-    margin-top: 3px;
-    margin-left: 3px;
+    color: #FFC107;
+    border: 2px solid #FFC107;
 }
