@@ -6,9 +6,17 @@ $("document").ready(function(){
             $(this).next().slideToggle();
     });
 
+    function resizeElementHeight(element) {
+        var height = 0;
+        var body = window.document.body;
+            height = window.innerHeight;
+        element.style.height = ((height - 48 - 48 - 38) + "px");
+    }
+
     function showPage() {
         var width = window.innerWidth;
         let htmlStyles = window.getComputedStyle(document.querySelector("html"));
+        resizeElementHeight(document.getElementById("FruitTable"));
 
         if (width >= 600) {
             document.documentElement.style.setProperty("--grid-rows-default", htmlStyles.getPropertyValue("--grid-rows-l"));

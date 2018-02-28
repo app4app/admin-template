@@ -19,7 +19,7 @@
     
     --main-bg-color: #f0f0f0;
     --panel-color-dark: rgba(9, 30, 66, 1);
-    --scrollbar-color: rgba(9, 30, 66, 1);
+    --scrollbar-color: #757575;
 
     --side-menu-background: #0747A6;
     --side-menu-color: #DEEBFF;
@@ -36,7 +36,7 @@
     --content-background: var(--blue-lighten-5);
     --content-color: black;
 
-    --content-mr-background: whitesmoke;
+    --content-mr-background: #ddd;
 
     --content-sr-background: var(--blue-lighten-1);
 
@@ -279,4 +279,87 @@ textarea {
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
+}
+
+.button.green {
+    border: 2px solid #4CAF50ff;
+    color: #fff;
+}
+
+.button.green:hover {
+    color: #4CAF50ff;
+}
+
+.button.green:active {
+    color: #8BC34A;
+    border: 2px solid #8BC34A;
+}
+
+.button.yellow {
+    border: 2px solid #FF9800ff;
+    color: #fff;
+}
+
+.button.yellow:hover {
+    color: #FF9800ff;
+}
+
+.button.yellow:active {
+    color: #FFC107;
+    border: 2px solid #FFC107;
+}
+
+.save-button {
+    background-color: var(--side-menu-background);
+    color: var(--side-menu-color);
+    padding: 1em;
+    font-size: 90%;    
+    margin: 0;
+    padding: 0.4em 1.5em 0.4em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    border: 2px solid #4CAF50ff;
+    color: #fff;
+}
+
+.cancel-button {
+    background-color: var(--side-menu-background);
+    color: var(--side-menu-color);
+    padding: 1em;
+    font-size: 90%;    
+    margin: 0;
+    padding: 0.4em 1.5em 0.4em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    border: 2px solid #FF9800ff;
+}
+
+div .save-button {
+    margin: 8px;
+}
+
+.save-button:hover {
+    color: #4CAF50ff;
+}
+
+.save-button:active {
+    background-color: #8BC34A;
+    color: var(--side-menu-color);
+}
+
+div .cancel-button {
+    margin: 8px;
+}
+
+.cancel-button:hover {
+    color: #FF9800ff;
+}
+
+.cancel-button:active {
+    background-color: #FFC107;
+    color: var(--side-menu-color);
 }
