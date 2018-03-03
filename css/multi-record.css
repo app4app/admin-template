@@ -12,7 +12,7 @@ table.fixed_headers td {
   }
 
 table.fixed_headers thead {
-    background-color: #555;
+    background-color: var(--panel-color-dark);
     color: #FDFDFD;
   }
 
@@ -30,9 +30,18 @@ table.fixed_headers tbody {
 
   .fixed_headers tbody tr:nth-child(even) {
     background-color: #DDD;
+    background-color: var(--blue-lighten-4);
   }
 
   .fixed_headers tbody tr:nth-child(odd) {
     background-color: #bbb;
+    background-color: var(--blue-lighten-3);
+  }
+
+  .fixed_headers tbody tr:hover {
+    background-color: #FFC107;
   }
   
+  .fixed_headers tbody tr:active {
+    background-color: #FF9800ff;
+  }

@@ -233,17 +233,23 @@ textarea {
     display: inline-block;
 }
 
-.side-menu-header-content .logo-area {
-    padding-top: 7px;
-    padding-left: 1em;
-}
-
-.logo-with-title {
+.logo-with-title,
+.logo-area,
+.logo-area p,
+.logo,
+.logo-area .logo-img,
+.logo-area .logo-title
+ {
+    margin: 0;
+    padding: 0;    
     display: inline-block; 
 }
 
-.logo {
-    display: inline-block;
+.logo-area p
+ {
+    position: absolute;
+    margin-top: 16px;
+    margin-left: 2px;
 }
 
 .logo.yellow {
