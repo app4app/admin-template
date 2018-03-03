@@ -61,7 +61,7 @@
 
 .content-panel > p {
     padding: 0;
-    min-width: 600px;
+    min-width: 320px;
     overflow-x: auto;
 }
 
@@ -97,7 +97,7 @@
     margin-left:2em;
     padding: 2em 4em 2em 2em;
     text-align: center;
-    min-width: 20em;
+    min-width: 320px;
     max-width: 800px;
     justify-self: right;
     align-self: top;
@@ -116,13 +116,13 @@
     max-width: 30em;
 }
 
-.login-card {
+.login-panel.login-card {
     border-radius: 0 6px 6px 0;
     /*box-shadow: 3px 3px 2px 0px #888888;*/
     width: 100%;
     min-height: 30em;
     text-align: left;
-    padding: 1em;
+    padding: 1em 3em 1em 1em;
 }
 
 .login-card p {
@@ -169,4 +169,40 @@
         width: 100%;
         height: var(--header-height);
     }
+
+    .content {
+        display: grid;
+        grid-template-areas: login-area page-description-area;
+        grid-template-columns: 1fr;    
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .description-panel {
+        border-radius: 0;
+        margin: 0;
+        padding: 2em;
+        text-align: center;
+        min-width: 320px;
+        justify-self: center;
+    }
+
+    .login-panel {
+        grid-row: 1;
+    }
+
+    .login-panel {
+        box-sizing: border-box;
+        background-color: var(--panel-color-dark);
+        border-radius: 0;
+        padding: 2em;
+        margin: 0;
+        justify-self: center;
+        align-self: top;
+        width: 100%;
+    }
+
+    .login-panel {
+        min-height: 10em;
+    }
+
 }

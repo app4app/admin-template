@@ -6,17 +6,42 @@ $("document").ready(function(){
             $(this).next().slideToggle();
     });
 
+    // Change the selector if needed
+    var $table = $('table.fixed_headers');
+    var $bodyCells = $table.find('tbody tr:first').children(), colWidth;
+
+    // Adjust the width of thead cells when window resizes
+    //$(window).resize(function() {
+  
+    //}).resize(); // Trigger resize handler    
+
     function resizeElementHeight(element) {
-        var height = 0;
+        var height = height = window.innerHeight;
+        var width = window.innerWidth;
         var body = window.document.body;
-            height = window.innerHeight;
-        element.style.height = ((height - 48 - 48 - 38) + "px");
+            
+        if (width >= 600) {            
+            element.style.height = ((height - 2 * 48) + "px");
+        } else {
+            element.style.height = ((height - 3 * 48) + "px");
+        }
     }
 
-    function showPage() {
+    function resizeColumnHeaders(element) {
+                // Get the tbody columns width array
+                colWidth = $bodyCells.map(function() {
+                    return $(this).width();
+                }).get();
+                
+                // Set the width of thead columns
+                $table.find('thead tr').children().each(function(i, v) {
+                    $(v).width(colWidth[i]);
+                });  
+    }
+
+    function resizePage() {
         var width = window.innerWidth;
         let htmlStyles = window.getComputedStyle(document.querySelector("html"));
-        resizeElementHeight(document.getElementById("FruitTable"));
 
         if (width >= 600) {
             document.documentElement.style.setProperty("--grid-rows-default", htmlStyles.getPropertyValue("--grid-rows-l"));
@@ -45,11 +70,15 @@ $("document").ready(function(){
             document.documentElement.style.setProperty("--display-content-panel", "block");
             document.documentElement.style.setProperty("--display-content-footer", "block");
         }
+
+        resizeElementHeight(document.getElementById("mr-grid"));
+        resizeColumnHeaders(document.getElementById("mr-grid"));
+
     }
 
     //window.onload=function(){
-        window.addEventListener("resize", showPage);  
-        showPage();
+        window.addEventListener("resize", resizePage);  
+        resizePage();
 
         document.getElementById("menu-show-hide").addEventListener("click", onClickMenu);
     //};

@@ -177,8 +177,7 @@ input[type="text"]:focus,
 input[type="textarea"],
 input[type="number"]:focus,
 input[type="tel"]:focus {
-  border: 1px solid #75757599;
-  box-shadow: inset 2px 2px 2px #303F9F88;
+  border: 3px solid #4CAF50ff;
   border-radius: 3px;
 }
 
@@ -362,4 +361,4 @@ div .cancel-button {
 .cancel-button:active {
     background-color: #FFC107;
     color: var(--side-menu-color);
-}
+} 

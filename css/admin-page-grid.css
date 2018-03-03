@@ -60,7 +60,7 @@ html {
 
 .content-panel > p {
     padding: 0;
-    min-width: 600px;
+    min-width: 320px;
     /*overflow-x: auto;*/
 }
 
