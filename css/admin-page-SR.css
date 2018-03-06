@@ -1,0 +1,200 @@
+:root {
+
+    --grid-area-default: 
+    "side_menu_header content_header content_header"
+    "side_menu_panel content_panel property_panel"
+    "side_menu_footer content_footer content_footer";
+    
+    --grid-rows-default: 
+        var(--header-height) 
+        auto 
+        var(--footer-height);   
+
+    --grid-columns-default: 
+        var(--side-menu-width) 1fr; 
+
+    --grid-rows-s-default:
+        var(--header-height)
+        var(--header-height)
+        1fr
+        var(--footer-height);
+
+    --content-padding: 5px;
+}
+
+html {
+    background-color: var(--main-bg-color);
+}
+
+.page {
+    display: grid;
+    grid-template-areas: var(--grid-area-default);
+    grid-template-columns: var(--grid-columns-default);    
+    grid-template-rows: var(--grid-rows-default);
+    height: 100vh;
+}
+
+/* CONTENT GRID DEFINITION */
+.content-header {
+    background-color: var(--content-header-background);
+    color: var(--content-header-color);
+    box-sizing: border-box;
+    height: var(--footer-height);
+    /*box-shadow: 0px 4px 2px 0px #888888;*/
+    width: 100%;
+}
+
+.content-header > p {
+    width: 400px;
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.content-panel {
+    background-color: var(--content-background);
+    color: var(--content-color);
+    padding: 0;
+    overflow-x: auto;
+}
+
+.content {
+    display: grid;
+    grid-template-areas: 
+      mr-area
+      mr-footer
+      sr-area;
+    grid-template-columns: 1fr;    
+    grid-template-rows: 1fr var(--content-padding) 1fr;
+    background-color: var(--panel-color-dark);
+}
+
+.content .multi-record {
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: var(--content-padding);
+    margin: 0;
+}
+
+.content .single-record {
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: var(--content-padding);
+    padding-top: 0;
+    margin: 0;
+    color: #555;
+}
+
+.content-footer {
+    background-color: var(--content-footer-background);
+    color: var(--content-footer-color);
+    /*box-shadow: 0px -2px 2px 0px #888888;*/
+}
+
+.property-panel {
+    background-color: lightgray;
+    color: var(--content-color);
+    padding: 0;
+}
+
+.side-menu-panel.display {
+    display: var(--display-side-menu-panel);
+}
+
+.side-menu-footer.display {
+    display: var(--display-side-menu-footer);
+}
+
+.content-header.display {
+    display: var(--display-content-header);
+}
+
+.content-panel.display {
+    display: var(--display-content-panel);
+}
+
+.content-footer.display {
+    display: var(--display-content-footer);
+}
+
+@media (max-width: 800px) {
+    .side-menu-header-content {
+        display: grid;
+        grid-template-columns: auto var(--header-height);
+        width: 100%;
+        height: var(--header-height);
+    }
+}
+
+/* SR menu */
+.sr-navigation {
+    padding-top: 0;
+    padding-left: 0em;
+}
+
+.sr-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sr-navigation li {
+    list-style: none;
+    float: left;
+    margin-right: 3px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: var(--panel-color-dark);
+    background-color: var(--blue-lighten-3);
+    margin-top: 0.3em;
+    padding: 0.7em;
+    /*border-right: 1px solid #e5e9dc;    */
+    border-bottom: 2px solid var(--panel-color-dark);
+    border-radius: 3px 3px 0 0; 
+    min-width: 5em;
+}
+
+.sr-navigation li.active {
+    margin-top: 0;
+    padding-top: 1em;
+    background-color: var(--blue-lighten-4);  
+    border-bottom: 2px solid var(--blue-lighten-4); 
+    color: black;
+    font-weight: bold;
+}
+
+.sr-navigation li.active:hover {
+    background-color: var(--blue-lighten-4);  
+}
+
+.sr-navigation li:hover {
+    margin-top: 0;
+    padding-top: 1em;
+    background-color: var(--orange-accent);
+    color: var(--panel-color-dark);
+}
+
+.sr-data {
+    display: block;
+    color: var(--panel-color-dark);
+    background-color: var(--blue-lighten-4);
+    padding: 1em 0.5em 0 0.5em;
+}
+
+.fix {
+    clear: both;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}

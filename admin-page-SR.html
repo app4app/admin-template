@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common-styling.css">
+    <link rel="stylesheet" href="css/side-menu.css">
+    <link rel="stylesheet" href="css/admin-page-SR.css">
+    <link rel="stylesheet" href="css/admin-page-menu.css">
+    <link rel="stylesheet" href="css/multi-record.css">
+    <link rel="stylesheet" href="css/form.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/admin-page-SR.js"></script>
+    <title>codeless.software admin</title>
+</head>
+<body>
+
+    <div class="page">
+
+        <div class="side-menu-header">
+            <div class="side-menu-header-content">
+                <div class="logo-area">
+                    <div class="logo-img">
+                        <img src="images/android-icon-192x192.png" width="48" height="48">
+                    </div> 
+                    <p>Codeless Software</p>
+                </div>
+                <a href="#"><i id="menu-show-hide" class="material-icons">menu</i></a>
+            </div>
+        </div>
+
+        <div class="side-menu-panel display">
+            <!--div w3-include-html="admin-page-menu.html"></div-->
+            <ul id="nav">
+                <li><a href="#">Korisnici</a>
+                    <ul>
+                        <li><a href="#">Putnici</a></li>
+                        <li><a href="#">Administratori</a></li>
+                        <li><a href="#">Sub-Item 1 c</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Matični podatci</a>
+                    <ul>
+                        <li><a href="#">Kupci</a></li>
+                        <li><a href="#">Prodajna mjesta</a></li>
+                        <li><a href="#">Artikli</a></li>
+                        <li><a href="#">Aktivnosti</a></li>
+                        <li><a href="#">Cjenici</a></li>
+                        <li><a href="#">Katalozi</a></li>
+                        <li><a href="#">Tereni</a></li>
+                        <li><a href="#">...</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Dokumenti</a>
+                    <ul>
+                        <li><a href="#">Narudžbe</a></li>
+                        <li><a href="#">Otpisi</a></li>
+                        <li><a href="#">Povrati</a></li>
+                        <li><a href="#">Aktivnosti</a></li>
+                        <li><a href="#">Rute</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Praćenje (GPS)</a>
+                </li>
+                <li><a href="#">Izvješća</a>
+                    <ul>
+                        <li><a href="#">Nepreuzeti dokumenti</a></li>
+                        <li><a href="#">Dokumenti za SAP</a></li>
+                        <li><a href="#">Kilometraža</a></li>
+                    </ul>
+                </li>   
+                <li><a href="#">Obrade</a>
+                    <ul>
+                        <li><a href="#">ZORA &gt IO</a></li>
+                        <li><a href="#">IO &gt ZORA</a></li>
+                    </ul>
+                </li>             
+                <li>
+                    <a href="index.html">Logout</a>
+                </li>                     
+            </ul>                   
+        </div>  
+
+        <div class="side-menu-footer display">
+            <p>V 0.0.3</p>
+        </div>
+
+        <div class="content-header display">
+
+        </div>
+
+        <div class="content-panel display">
+            <div id="content_id" class="content">
+                <div class="multi-record">
+                    <table id="mr-grid" class="fixed_headers">
+                        <thead>
+                            <tr>
+                                <th width="20%">Name</th>
+                                <th width="30%">Color</th>
+                                <th width="10%">Weight</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody width="1800px">
+                            <tr width="1800px">
+                                <td width="20%">Apple</td>
+                                <td width="30%">Red</td>
+                                <td width="10%">100gr</td>
+                                <td width="2500px">These are red.</td>
+                            </tr>
+                            <tr>
+                                <td>Pear</td>
+                                <td>Green</td>
+                                <td width="10%">100gr</td>
+                                <td>These are green.</td>
+                            </tr>
+                            <tr>
+                                <td>Grape</td>
+                                <td>Purple / Green</td>
+                                <td width="10%">10gr</td>
+                                <td>These are purple and green.</td>
+                            </tr>
+                            <tr>
+                                <td>Orange</td>
+                                <td>Orange</td>
+                                <td width="10%">120gr</td>
+                                <td>These are orange.</td>
+                            </tr>
+                            <tr>
+                                <td>Banana</td>
+                                <td>Yellow</td>
+                                <td width="10%">210gr</td>
+                                <td>These are yellow.</td>
+                            </tr>
+                            <tr>
+                                <td>Kiwi</td>
+                                <td>Green</td>
+                                <td width="10%">50gr</td>
+                                <td>These are green.</td>
+                            </tr>
+                            <tr>
+                                <td>Plum</td>
+                                <td>Purple</td>
+                                <td width="10%">20gr</td>
+                                <td>These are Purple</td>
+                            </tr>
+                            <tr>
+                                <td>Watermelon</td>
+                                <td>Red</td>
+                                <td width="10%">9kg</td>
+                                <td>These are red.</td>
+                            </tr>
+                            <tr>
+                                <td>Tomato</td>
+                                <td>Red</td>
+                                <td width="10%">80gr</td>
+                                <td>These are red.</td>
+                            </tr>
+                            <tr>
+                                <td>Cherry</td>
+                                <td>Red</td>
+                                <td width="10%">7gr</td>
+                                <td>These are red.</td>
+                            </tr>
+                            <tr>
+                                <td>Cantelope</td>
+                                <td>Orange</td>
+                                <td width="10%">100gr</td>
+                                <td>These are orange inside.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div>gap</div>
+                        
+
+                <div  id="sr-grid" class="single-record">
+                    <div class="sr-container">
+                        <div class="sr-navigation">
+                            <ul class="group">
+                                <li id="tab_1" class="tab active">Fruit</li>
+                                <li id="tab_2" class="tab">Fruit Detail</li>
+                                <li id="tab_3" class="tab">Fruit Items</li>
+                                <li id="tab_4" class="tab">Attachments</li>
+                            </ul>
+                        </div>
+
+                        <div class="sr-data group">
+                            <form>
+                                <div>
+                                    <label for="name_id">Name:</label>
+                                    <input id="name_id" type="text" name="name_val" disabled placeholder="Name">        
+                                </div>
+                                <div>
+                                    <label for="color_id">Color:</label>
+                                    <input id="color_id" type="text" name="color_val" disabled placeholder="Color">        
+                                </div>
+                                <div>
+                                    <label for="weight_id">Weight:</label>
+                                    <input id="weight_id" type="text" name="weight_val" disabled placeholder="Weight">        
+                                </div>
+                                <div>
+                                    <label for="description_id">Description:</label>
+                                    <textarea id="description_id" name="description_val" disabled placeholder="Description"></textarea>    
+                                </div>                                
+                            </form>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+        
+        </div>
+
+        <div class="content-footer display">
+            <div id="btn_edit_id" class="green-button inline-block-hide">Edit</div>
+            <div id="btn_save_id" class="green-button inline-block-hide">Save</div>
+            <div id="btn_cancel_id" class="orange-button inline-block-hide">Cancel</div>
+        </div>
+
+        <div class="property-panel"></div>
+
+    </div>         
+</body>
+</html>

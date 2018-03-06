@@ -16,6 +16,8 @@
     --blue-accent-2: #448aff;
     --blue-accent-3: #2979ff;
     --blue-accent-4: #2962ff;
+
+    --orange-accent: #FF9800ff;
     
     --main-bg-color: #f0f0f0;
     --panel-color-dark: rgba(9, 30, 66, 1);
@@ -301,12 +303,12 @@ textarea {
 }
 
 .button.yellow {
-    border: 2px solid #FF9800ff;
+    border: 2px solid var(--orange-accent);
     color: #fff;
 }
 
 .button.yellow:hover {
-    color: #FF9800ff;
+    color: var(--orange-accent);
 }
 
 .button.yellow:active {
@@ -314,7 +316,7 @@ textarea {
     border: 2px solid #FFC107;
 }
 
-.save-button {
+.green-button {
     background-color: var(--side-menu-background);
     color: var(--side-menu-color);
     padding: 1em;
@@ -329,7 +331,7 @@ textarea {
     color: #fff;
 }
 
-.cancel-button {
+.orange-button {
     background-color: var(--side-menu-background);
     color: var(--side-menu-color);
     padding: 1em;
@@ -340,31 +342,39 @@ textarea {
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
-    border: 2px solid #FF9800ff;
+    border: 2px solid var(--orange-accent);
 }
 
-div .save-button {
+div .green-button {
     margin: 8px;
 }
 
-.save-button:hover {
+.green-button:hover {
     color: #4CAF50ff;
 }
 
-.save-button:active {
+.green-button:active {
     background-color: #8BC34A;
     color: var(--side-menu-color);
 }
 
-div .cancel-button {
+div .orange-button {
     margin: 8px;
 }
 
-.cancel-button:hover {
-    color: #FF9800ff;
+.orange-button:hover {
+    color: var(--orange-accent);
 }
 
-.cancel-button:active {
+.orange-button:active {
     background-color: #FFC107;
     color: var(--side-menu-color);
 } 
+
+.inline-block-show {
+    display: inline-block;
+}
+
+.inline-block-hide {
+    display: none;
+}

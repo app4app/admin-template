@@ -1,0 +1,126 @@
+:root {
+
+    --grid-area-default: 
+    "side_menu_header content_header content_header"
+    "side_menu_panel content_panel property_panel"
+    "side_menu_footer content_footer content_footer";
+    
+    --grid-rows-default: 
+        var(--header-height) 
+        auto 
+        var(--footer-height);   
+
+    --grid-columns-default: 
+        var(--side-menu-width) 1fr; 
+
+    --grid-rows-s-default:
+        var(--header-height)
+        var(--header-height)
+        1fr
+        var(--footer-height);
+
+
+}
+
+html {
+    background-color: var(--main-bg-color);
+}
+
+.page {
+    display: grid;
+    grid-template-areas: var(--grid-area-default);
+    grid-template-columns: var(--grid-columns-default);    
+    grid-template-rows: var(--grid-rows-default);
+    height: 100vh;
+}
+
+/* CONTENT GRID DEFINITION */
+.content-header {
+    background-color: var(--content-header-background);
+    color: var(--content-header-color);
+    box-sizing: border-box;
+    height: var(--footer-height);
+    /*box-shadow: 0px 4px 2px 0px #888888;*/
+    width: 100%;
+}
+
+.content-header > p {
+    width: 400px;
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.content-panel {
+    background-color: var(--content-background);
+    color: var(--content-color);
+    padding: 0;
+    overflow-x: auto;
+}
+
+.content-panel > p {
+    padding: 0;
+    min-width: 320px;
+    /*overflow-x: auto;*/
+}
+
+.content {
+    display: grid;
+    grid-template-areas: page-description-area login-area;
+    grid-template-columns: 1fr;    
+    grid-template-rows: 50% 50%;
+}
+
+.content.multi-record {
+    box-sizing: border-box;
+    background-color: #eeeeee;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.content.single-record {
+    background-color: #424242;
+    color: white;
+    overflow: auto;
+}
+
+.content-footer {
+    background-color: var(--content-footer-background);
+    color: var(--content-footer-color);
+    /*box-shadow: 0px -2px 2px 0px #888888;*/
+}
+
+.property-panel {
+    background-color: lightgray;
+    color: var(--content-color);
+    padding: 0;
+}
+
+.side-menu-panel.display {
+    display: var(--display-side-menu-panel);
+}
+
+.side-menu-footer.display {
+    display: var(--display-side-menu-footer);
+}
+
+.content-header.display {
+    display: var(--display-content-header);
+}
+
+.content-panel.display {
+    display: var(--display-content-panel);
+}
+
+.content-footer.display {
+    display: var(--display-content-footer);
+}
+
+@media (max-width: 800px) {
+    .side-menu-header-content {
+        display: grid;
+        grid-template-columns: auto var(--header-height);
+        width: 100%;
+        height: var(--header-height);
+    }
+}

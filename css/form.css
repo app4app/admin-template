@@ -1,0 +1,88 @@
+label { 
+    float: left; 
+    width: 10%; 
+    margin-top: 0.5em;
+    margin-right: 1em; 
+    box-sizing: border-box;
+}
+
+.hidden-label {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+  
+input,
+select, 
+textarea {
+  font-family: Tahoma, sans-serif;
+  font-size: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 3px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="textarea"],
+input[type="number"],
+input[type="tel"],
+select {
+  width: 40%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0 0.5em;
+  height: 2em;
+  margin-bottom: 0.5em;
+  /*border: 1px solid #cdcdcd;*/
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="textarea"],
+input[type="number"]:focus,
+input[type="tel"]:focus {
+  border: 2px solid #4CAF50ff;
+  border-radius: 3px;
+}
+
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="text"]:disabled,
+input[type="number"]:disabled,
+input[type="tel"]:disabled {
+    background-color: var(--blue-lighten-3);
+}
+
+textarea {
+  width: 40%;
+  display: block;
+  resize: vertical;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 0.5em 0.5em;
+  min-height: 3em;
+  margin-bottom: 0.5em;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+textarea:focus {
+    border: 2px solid #4CAF50ff;
+    border-radius: 3px;
+}
+
+textarea:disabled {
+    background-color: var(--blue-lighten-3);
+}
